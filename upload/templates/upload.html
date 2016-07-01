@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 全局js -->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+    }
+    
+    .wrap {
+        min-height: 100%;
+        vertical-align: middle;
+    }
+
+    ul {
+    	list-style: none;
+    }
+    ul li{
+    	display: inline;
+    }
+    input{
+    	margin: 0 auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <ul>
+            {% for image in images %}
+            <li><img src="{{ image.link }}" height="200px" width="200px" /></li>
+            {% endfor %}
+        </ul>
+        <div class="row text-center">
+            成功啦！
+            <input type="file" > </input>
+            <button class="btn btn-success" for="file">点击选择图片</button>
+			<input id="file" type="file" style="display:none;" />
+
+        </div>
+    </div>
+    <script>
+    $('#test').click(function() {
+        alert('sb');
+    });
+    </script>
+</body>
+
+</html>
